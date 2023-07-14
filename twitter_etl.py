@@ -22,3 +22,15 @@ tweets = api.user_timeline(screen_name = '@elonmusk',
                         include_rts = False,
                         tweet_mode = 'extended'
                         )
+
+tweet_list = []
+for tweet in tweets:
+    text = tweet._json["full_text"]
+
+    refined_tweet = {'user': tweet.user.screen_name,
+                     'text': text,
+                     'favorite_count': tweet.favorite_count,
+                     'retweet_count': tweet.retweet_count,
+                     'created_at': tweet.created_at}
+    
+    tweet_list.append(refined_tweet)
