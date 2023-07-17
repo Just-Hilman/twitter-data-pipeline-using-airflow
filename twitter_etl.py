@@ -34,3 +34,6 @@ for tweet in tweets:
                      'created_at': tweet.created_at}
     
     tweet_list.append(refined_tweet)
+
+df = pd.DataFrame(tweet_list)
+df.to_csv("elonmusk_tweeter_data.csv")
