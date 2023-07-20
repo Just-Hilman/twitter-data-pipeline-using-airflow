@@ -9,6 +9,7 @@ access_secret = ""
 consumer_key = ""
 consumer_secret = ""
 
+
 # Twitter authentication 
 auth = tweepy.OAuth1UserHandler(access_key, access_secret)
 auth.set_access_token(consumer_key, consumer_secret)
